@@ -1,0 +1,44 @@
+{
+    "name": "hxd/query-logger",
+    "description": "This is a package that saves all database queries to a log file with some customizations",
+    "keywords": [
+        "hxd",
+        "query-logger"
+    ],
+    "homepage": "https://github.com/hxd/query-logger",
+    "license": "MIT",
+    "type": "library",
+    "authors": [
+        {
+            "name": "Xuan Dung, Ho",
+            "email": "me@hxd.vn",
+            "role": "Developer"
+        }
+    ],
+    "require": {
+        "php": "^7.3|^7.4|^8.0|^8.1",
+        "illuminate/database": "^6|^7|^8|^9",
+        "illuminate/http": "^6|^7|^8|^9",
+        "illuminate/log": "^6|^7|^8|^9"
+    },
+    "require-dev": {
+    },
+    "autoload": {
+        "psr-4": {
+            "Hxd\\QueryLogger\\": "src"
+        }
+    },
+    "config": {
+        "sort-packages": true
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Hxd\\QueryLogger\\QueryLoggerServiceProvider"
+            ],
+            "aliases": {
+                "QueryLogger": "Hxd\\QueryLogger\\QueryLoggerFacade"
+            }
+        }
+    }
+}
